@@ -96,6 +96,8 @@ filetype indent plugin on
 " Plugin settings
 
 let g:yankring_history_dir = '$HOME/.vim'
+" ignore nginx module files
+let g:syntastic_ignore_files = ["ngx.*\.c$","ngx.*\.h$"]
 
 
 "------------------------------------------------------------
@@ -124,7 +126,7 @@ set showcmd
 " Do not highlight searches by default
 " (the vim-unimpaired plugin provides `coh` to toggle this when needed)
 " (my <Space> mapping below also temporarily turns off highlighting)
-set nohlsearch
+" set nohlsearch
 
 " Modelines have historically been a source of security vulnerabilities.  As
 " such, it may be a good idea to disable them and use the securemodelines
